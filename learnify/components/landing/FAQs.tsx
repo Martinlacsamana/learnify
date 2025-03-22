@@ -11,32 +11,32 @@ const FAQs = () => {
     {
       question: "What is Learnify?",
       answer:
-        "Learnify is a comprehensive learning platform that combines brain dumping, interactive flashcards, and educational field exploration to help you master any subject efficiently.",
+        "It's the future.",
     },
     {
       question: "How does the Brain Dump feature work?",
       answer:
-        "Brain Dump allows you to quickly capture your thoughts and ideas in a structured format. Our AI helps organize and connect related concepts, making it easier to understand complex topics.",
+        "I don't know ask GPT.",
     },
     {
       question: "What makes Learnify's flashcards different?",
       answer:
-        "Our flashcards use spaced repetition algorithms that adapt to your learning pace. They also support multimedia content and can generate questions based on your brain dumps.",
+        "The developer, Martin, created them.",
     },
     {
       question: "Can I use Learnify for any subject?",
       answer:
-        "Yes! Learnify is designed to work with any subject matter. Whether you're studying computer science, history, languages, or any other topic, our platform can help you learn more effectively.",
+        "No, it doesn't help with learning to approach someone at the bar.",
     },
     {
       question: "Is there a mobile app available?",
       answer:
-        "Yes, Learnify is available on iOS and Android, allowing you to learn on the go. Your progress syncs across all your devices.",
+        "Do you want me to sleep or not?",
     },
     {
       question: "How much does Learnify cost?",
       answer:
-        "Learnify offers a free tier with limited features. Premium plans start at $9.99/month with full access to all features. We also offer special pricing for students and educational institutions.",
+        "Right now it's free, but I will charge to my heart's content at some point (jk).",
     },
   ]
 
@@ -48,7 +48,7 @@ const FAQs = () => {
         <Accordion type="single" collapsible className="w-full mt-[5%]">
             <div>
                 {faqs.map((faq, i) => (
-                    <AccordionItem value={`item ${i}`} className="text-custom-gray">
+                    <AccordionItem key={i} value={`item ${i}`} className="text-custom-gray">
                         <AccordionTrigger className="text-white cursor-pointer ">
                             <p className="text-xl text-white font-semibold">{faq.question}</p>
                         </AccordionTrigger>
