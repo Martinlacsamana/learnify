@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+@theme {
+  --color-semi-gray: rgb(107 114 128 / 0.3);
+  --color-custom-purple: rgb(124 58 237 / 0.9);
+  --color-custom-teal: rgb(20 184 166 / 0.9);
+  --color-custom-gray: #27272A;
+  
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ededed;
+  }
+}
+
+/* Will swap this if we want light-mode, but lowkey I like dark-mode.*/
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
