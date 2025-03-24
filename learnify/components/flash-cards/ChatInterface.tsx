@@ -15,6 +15,8 @@ interface Props {
 const ChatInterface = ( {topic}: Props) => {
     const [messages, setMessages] = useState<Message[]>([]);
     const [isOpen, setIsOpen] = useState(false);
+    const [input, setInput] = useState('')
+    const [isLoading, setIsLoading] = useState(false);
 
     // Last message ref to ensure it's in view
     const lastMessageRef = useRef<HTMLDivElement>(null);
@@ -22,6 +24,46 @@ const ChatInterface = ( {topic}: Props) => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault() 
+
+        // Ensure valid input (check whitespaces)
+        if (!input.trim()) {
+            return;
+        }
+
+        // Add our message to messages
+        const userMessage: Message = {
+            id: Date.now().toString(),
+            content: input,
+            sender: 'user',
+            timeStamp: new Date()
+        }
+
+        setMessages((prev) => [...prev, userMessage])
+        setInput('') // reset user input
+        setIsLoading(true);
+
+        try {
+            const response = 'Here it is'
+            console.log(response);
+
+        } catch (err) {
+            console.error(err);
+        }
+
+
+        // Call our OPENAI endpoint (sample below)
+        const returnedMessage: Message = {
+            id: 'welcome',
+            content: 'What do you want now?',
+            sender: 'assistant',
+            timeStamp: new Date()
+        }
+
+        // Include the new message in our messages
+        const updatedMessages = [...messages, returnedMessage]
+        setMessages(updatedMessages);
+
+        setIsLoading(false)
     }
 
     // Load chat with an assistant welcome message
@@ -39,15 +81,11 @@ const ChatInterface = ( {topic}: Props) => {
 
     }, [isOpen])
 
-
-
-
     if (!isOpen) {
         return (
             <div>This is the dropdown thing</div>
         )
     }
-
 
     return (
         <div>
