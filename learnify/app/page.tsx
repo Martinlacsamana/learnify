@@ -18,9 +18,8 @@ export default function Home() {
             Master any subject <br></br>
             with <span className="text-custom-purple">Learnify</span>
           </h1>
-          <p className="w-2/3 text-xl text-center text-gray-300">
-            The ultimate learning platform that adapts to your syle. Brain dump
-            your thoughts, create interactive flashcards, and explore new concepts.
+          <p className="w-3/5 text-xl text-center text-gray-300">
+            Whether you're a student, self-learner, or developer, Learnify helps you learn more efficiently by encouraging deep, active engagement with what you're studying.
           </p>
 
           {/* BUTTONS */}
@@ -70,19 +69,19 @@ export default function Home() {
               icon={Brain} 
               color="purple" 
               feature="Brain Dump" 
-              summary="Quickly capture your thoughts and ideas in a structured format. Our AI helps organize and connect related concepts"
+              summary="Freely write out everything you remember about a topic. Our AI helps organize your thoughts and highlight key ideas that serve as the foundation for your learning journey."
             />
             <FeatureSummary 
               icon={Flashlight} 
               color="teal" 
-              feature="Brain Dump" 
-              summary="Quickly capture your thoughts and ideas in a structured format. Our AI helps organize and connect related concepts"
+              feature="Interactive Flashcards" 
+              summary="Scroll through flashcards like a feed and engage with each one using a built-in AI assistant that helps you dig deeper into topics, with coding practice coming soon."
             />
             <FeatureSummary 
               icon={Compass} 
               color="purple" 
-              feature="Brain Dump" 
-              summary="Quickly capture your thoughts and ideas in a structured format. Our AI helps organize and connect related concepts"
+              feature="Mindmap Visualization" 
+              summary="Visualize your knowledge in a dynamic, node-based graph. Get a bird's eye view of what you know and what you might be missing, making connections intuitive."
             />
           </div>
 
@@ -90,22 +89,22 @@ export default function Home() {
           <div className="flex flex-col w-full gap-16">
             <Feature 
               feature="Brain Dump" 
-              description="Capture your thoughts in a structured way. Our AI-powered system helps you organize and connect related concepts, making it easier to understand complex topics"
-              items={["Quick note-taking", "AI-powered organization", "Concept mapping", "Searchable knowledge base"]}
+              description="Learning starts with what you know. With our Brain Dump feature, you can freely write out everything you remember about a topic-no pressure, no structure required. From there, our AI helps organize your thoughts and highlight the key ideas."
+              items={["Mental whiteboard, evolved", "No structure required", "AI-powered organization", "Foundation for learning"]}
               reverse={false}
               color="purple"
             />
             <Feature 
-              feature="Brain Dump" 
-              description="Capture your thoughts in a structured way. Our AI-powered system helps you organize and connect related concepts, making it easier to understand complex topics"
-              items={["Quick note-taking", "AI-powered organization", "Concept mapping", "Searchable knowledge base"]}
+              feature="Flashcards, Reimagined" 
+              description="Instead of static Q&A, our flashcards are designed to be interactive. Scroll through them like a feed, and engage with each one using a built-in AI assistant that helps you dig deeper into the topic."
+              items={["Interactive learning", "Built-in AI assistance", "In-card coding practice (coming soon)", "Instant feedback"]}
               reverse={true}
               color="teal"
             />
             <Feature 
-              feature="Brain Dump" 
-              description="Capture your thoughts in a structured way. Our AI-powered system helps you organize and connect related concepts, making it easier to understand complex topics"
-              items={["Quick note-taking", "AI-powered organization", "Concept mapping", "Searchable knowledge base"]}
+              feature="Visualize Your Understanding" 
+              description="Once your ideas are organized, our Mindmap feature allows you to visualize your knowledge in a dynamic, node-based graph. Each node represents a concept you've touched on, giving you a bird's-eye view of your knowledge."
+              items={["Dynamic node-based graphs", "Visual concept connections", "Identify knowledge gaps", "Intuitive reorganization"]}
               reverse={false}
               color="purple"
             />
