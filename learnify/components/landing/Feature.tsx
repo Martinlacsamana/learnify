@@ -1,13 +1,15 @@
+import Image from "next/image"
 
 interface Props {
     feature: string,
     description: string,
     items: string[],
     reverse: boolean,
-    color: string
+    color: string,
+    photo?: string
 }
 
-const Feature = ({feature, description, items, reverse, color}: Props) => {
+const Feature = ({feature, description, items, reverse, color, photo}: Props) => {
     const colorClasses = {
         'purple': {
             text: 'text-custom-purple',
@@ -40,10 +42,19 @@ const Feature = ({feature, description, items, reverse, color}: Props) => {
             </div>
 
             {/* IMAGE FOR FEATURE 1 */}
-            <div className="flex w-1/2 bg-zinc-800/80 rounded-lg items-center justify-center">
-                <p className="">Brain Dump Interface here</p>
+            <div className="flex w-1/2 rounded-lg items-center justify-center">
+                    <Image 
+                        priority
+                        src={photo || ''} 
+                        alt="Feature Image"
+                        width={600}  // Adjust these values
+                        height={400}
+                        className="w-full"
+                        />
 
             </div>
+
+ 
 
         </div>
     )

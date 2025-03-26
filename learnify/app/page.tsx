@@ -93,6 +93,7 @@ export default function Home() {
               items={["Mental whiteboard, evolved", "No structure required", "AI-powered organization", "Foundation for learning"]}
               reverse={false}
               color="purple"
+              photo="https://learnify-static-images.s3.us-west-1.amazonaws.com/Learnify-Braindump.png"
             />
             <Feature 
               feature="Flashcards, Reimagined" 
@@ -100,6 +101,7 @@ export default function Home() {
               items={["Interactive learning", "Built-in AI assistance", "In-card coding practice (coming soon)", "Instant feedback"]}
               reverse={true}
               color="teal"
+              photo="https://learnify-static-images.s3.us-west-1.amazonaws.com/Learnify-Flashcards.png"
             />
             <Feature 
               feature="Visualize Your Understanding" 
@@ -107,6 +109,7 @@ export default function Home() {
               items={["Dynamic node-based graphs", "Visual concept connections", "Identify knowledge gaps", "Intuitive reorganization"]}
               reverse={false}
               color="purple"
+              photo="https://learnify-static-images.s3.us-west-1.amazonaws.com/Learnify-Flashcards.png"
             />
 
           </div>
